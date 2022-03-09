@@ -20,6 +20,4 @@ function App() {
   );
 }
 
-reportWebVitals(App);
-
 export default App;
