@@ -6,7 +6,7 @@ import SectionTitle from './component/section-title';
 
 function App() {
 
-  let [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
   const handleClick = () => {
     setChecked(!checked)
   }
