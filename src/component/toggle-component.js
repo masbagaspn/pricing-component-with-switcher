@@ -6,7 +6,7 @@ function ToggleComponent({handleChange, checked}) {
   }
   return (
     <div className='toggle-container'>
-        <label htmlFor="checbox">
+        <label className="switcher">
             <input type="checkbox" 
               name="checkbox" 
               id="checkbox" 
@@ -14,8 +14,8 @@ function ToggleComponent({handleChange, checked}) {
               onChange={handleChange} 
               style={checked ? {transform: 'translateX(1.5rem)'} : {transform: 'translateX(0)'}}
             />
-            <div className="toggle" 
-            style={checked ? {transform: 'translateX(1.5rem)'} : {transform: 'translateX(0)'}}></div>
+            <span className="toggle" 
+            style={checked ? {transform: 'translateX(1.5rem)'} : {transform: 'translateX(0)'}}></span>
         </label>
     </div>
   )

@@ -59,7 +59,7 @@
   height: 1.5rem;
   width: 1.5rem;
   position: absolute;
-  top: 0.25rem;
+  top: 0.24rem;
   left: 0.25rem;
   cursor: pointer;
   z-index: 3;
@@ -71,7 +71,7 @@
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  top: 0.25rem;
+  top: 0.24rem;
   left: 0.25rem;
   transition: all 0.25s ease-in-out;
 }

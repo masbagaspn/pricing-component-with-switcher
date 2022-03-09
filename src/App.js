@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import dataArray from './array';
 import CardContainer from './component/card-container';
 import SectionTitle from './component/section-title';
+import reportWebVitals from './reportWebVitals';
 
 function App() {
 
@@ -18,5 +19,7 @@ function App() {
     </div>
   );
 }
+
+reportWebVitals(App);
 
 export default App;
