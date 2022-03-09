@@ -3,18 +3,17 @@ import React, {useState} from 'react';
 import dataArray from './array';
 import CardContainer from './component/card-container';
 import SectionTitle from './component/section-title';
-import reportWebVitals from './reportWebVitals';
 
 function App() {
 
-  const [checked, setChecked] = useState(false);
-  const handleChange = () => {
+  let [checked, setChecked] = useState(false);
+  const handleClick = () => {
     setChecked(!checked)
   }
   
   return (
     <div className="App">
-      <SectionTitle handleChange={handleChange} checked={checked}/>
+      <SectionTitle handleClick={handleClick} checked={checked}/>
       <CardContainer data={dataArray} checked={checked}/>
     </div>
   );
