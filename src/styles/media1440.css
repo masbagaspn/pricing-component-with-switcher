@@ -1,0 +1,32 @@
+@media only screen and (min-width: 1024px) {
+  * {
+    font-size: 70%;
+  }
+
+  .App {
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-position: bottom left, top right;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    padding: 0;
+  }
+  .App .card-container {
+    flex-direction: row;
+    gap: 0;
+  }
+  .App .card-container .dark {
+    padding: 3rem;
+  }
+  .App .card-container .dark .title {
+    font-size: 1.25rem;
+  }
+  .App .card-container .dark .price {
+    font-size: 4.5rem;
+  }
+  .App .card-container .dark .price .dollar-sign {
+    font-size: 2.5rem;
+  }
+  .App .card-container .dark .feature {
+    font-size: 1.05rem;
+  }
+}/*# sourceMappingURL=media1440.css.map */

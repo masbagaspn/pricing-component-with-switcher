@@ -1,0 +1,199 @@
+$linear-gradient: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$very-light-grayish-blue: hsl(240, 78%, 98%);
+$light-grayish-blue: hsl(234, 14%, 74%);
+$grayish-blue: hsl(233, 13%, 49%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+$primary-blue: hsl(237, 63%, 64%);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $very-light-grayish-blue;
+  background-image: url(../images/bg-top.svg);
+  background-position: 100% -2.5rem;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  padding: 4rem 1rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 5rem;
+
+  .section-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    .section-title{
+      font-size: 2rem;
+      color: $grayish-blue;
+    }
+    .duration-container{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1.5rem;
+
+      .duration{
+        font-size: .95rem;
+        color: $light-grayish-blue;
+      }
+
+      .toggle-container{
+        position: relative;
+        background-image: $linear-gradient;
+        width: 3.5rem;
+        height: 2rem;
+        border-radius: 18px;
+        cursor: pointer;
+  
+        &:hover{
+          opacity: 0.5;
+        }
+  
+        input{
+          height: 1.5rem;
+          width: 1.5rem;
+          position: absolute;
+          top: 0.25rem;
+          left: 0.25rem;
+          cursor: pointer;
+          z-index: 3;
+          opacity: 0;
+        }
+  
+        .toggle{
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: white;
+          border-radius: 50%;
+          position: absolute;
+          top: 0.25rem;
+          left: 0.25rem;
+          transition: all 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .card-container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    
+    .card{
+      width: 100%;
+      max-width: 22.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      background-color: rgb(255, 255, 255);
+      border-radius: .5rem;
+      padding: 2.175rem 1.65rem;
+      box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.05);
+      .title{
+        color: $grayish-blue;
+        font-size: 1.15rem;
+        margin-bottom: 1.25rem;
+      }
+      .price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        font-size: 4.5rem;
+        color: $dark-grayish-blue;
+        margin-bottom: 1.5rem;
+  
+        .dollar-sign{
+          font-size: 2.5rem;
+          margin-right: .25rem;
+        }
+      }
+      ul{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        li{
+          color: $grayish-blue;
+          padding: 1.05rem;
+          font-size: 1rem;
+
+          &:nth-child(1), &:nth-child(3){
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+
+      button{
+        background-image: $linear-gradient;
+        width: 100%;
+        text-transform: uppercase;
+        height: 2.85rem;
+        color: white;
+        font-size: .75rem;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover, &:focus{
+          background-color: white;
+          color: hsl(237, 63%, 64%);
+          background-image: none;
+          border: 1px solid hsl(237, 63%, 64%);
+        }
+      }
+    }
+
+    .dark{
+      background-image: $linear-gradient;
+      
+      .title, .price, .feature{
+        color: $very-light-grayish-blue;
+      }
+
+      button{
+        background-color: $very-light-grayish-blue;
+        background-image: none;
+        color: $primary-blue;
+
+        &:hover, &:focus{
+          background-image: $linear-gradient;
+          color: $very-light-grayish-blue;
+          border: 1px solid $very-light-grayish-blue;
+        }
+      }
+      .feature{
+        &:nth-child(1), &:nth-child(3){
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}
+
+@import 'media1440';

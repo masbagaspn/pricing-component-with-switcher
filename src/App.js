@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import React, {useState} from 'react';
+import dataArray from './array';
+import CardContainer from './component/card-container';
+import SectionTitle from './component/section-title';
 
 function App() {
+
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked(!checked)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SectionTitle handleChange={handleChange} checked={checked}/>
+      <CardContainer data={dataArray} checked={checked}/>
     </div>
   );
 }

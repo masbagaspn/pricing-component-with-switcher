@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f6f6fe;
+  background-image: url(../images/bg-top.svg);
+  background-position: 100% -2.5rem;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+.App .section-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.App .section-title-container .section-title {
+  font-size: 2rem;
+  color: #6d708d;
+}
+.App .section-title-container .duration-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.App .section-title-container .duration-container .duration {
+  font-size: 0.95rem;
+  color: #b3b5c6;
+}
+.App .section-title-container .duration-container .toggle-container {
+  position: relative;
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  width: 3.5rem;
+  height: 2rem;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.App .section-title-container .duration-container .toggle-container:hover {
+  opacity: 0.5;
+}
+.App .section-title-container .duration-container .toggle-container input {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+}
+.App .section-title-container .duration-container .toggle-container .toggle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  transition: all 0.25s ease-in-out;
+}
+.App .card-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.App .card-container .card {
+  width: 100%;
+  max-width: 22.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2.175rem 1.65rem;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.05);
+}
+.App .card-container .card .title {
+  color: #6d708d;
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+.App .card-container .card .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 4.5rem;
+  color: #494c5f;
+  margin-bottom: 1.5rem;
+}
+.App .card-container .card .price .dollar-sign {
+  font-size: 2.5rem;
+  margin-right: 0.25rem;
+}
+.App .card-container .card ul {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.App .card-container .card ul li {
+  color: #6d708d;
+  padding: 1.05rem;
+  font-size: 1rem;
+}
+.App .card-container .card ul li:nth-child(1), .App .card-container .card ul li:nth-child(3) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.App .card-container .card button {
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  width: 100%;
+  text-transform: uppercase;
+  height: 2.85rem;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.App .card-container .card button:hover, .App .card-container .card button:focus {
+  background-color: white;
+  color: #696fdd;
+  background-image: none;
+  border: 1px solid #696fdd;
+}
+.App .card-container .dark {
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+}
+.App .card-container .dark .title, .App .card-container .dark .price, .App .card-container .dark .feature {
+  color: #f6f6fe;
+}
+.App .card-container .dark button {
+  background-color: #f6f6fe;
+  background-image: none;
+  color: #696fdd;
+}
+.App .card-container .dark button:hover, .App .card-container .dark button:focus {
+  background-image: linear-gradient(90deg, #a3a8f0, #696fdd);
+  color: #f6f6fe;
+  border: 1px solid #f6f6fe;
+}
+.App .card-container .dark .feature:nth-child(1), .App .card-container .dark .feature:nth-child(3) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 1024px) {
+  * {
+    font-size: 70%;
+  }
+
+  .App {
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-position: bottom left, top right;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    padding: 0;
+  }
+  .App .card-container {
+    flex-direction: row;
+    gap: 0;
+  }
+  .App .card-container .dark {
+    padding: 3rem;
+  }
+  .App .card-container .dark .title {
+    font-size: 1.25rem;
+  }
+  .App .card-container .dark .price {
+    font-size: 4.5rem;
+  }
+  .App .card-container .dark .price .dollar-sign {
+    font-size: 2.5rem;
+  }
+  .App .card-container .dark .feature {
+    font-size: 1.05rem;
+  }
+}/*# sourceMappingURL=App.css.map */
